@@ -8,14 +8,14 @@ LABEL maintainer="Hamel Husain <youremail@gmail.com>"
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
-    git-core \
     build-essential \
     byobu \
     curl \
+    git-core \
     htop \
     pkg-config \
-    python-pip \
     python3-dev \
+    python-pip \
     python-setuptools \
     python-virtualenv \
     unzip \
@@ -23,17 +23,17 @@ RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificate
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
 
+RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
+    wget --quiet https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh -O ~/anaconda.sh && \
+    /bin/bash ~/anaconda.sh -b -p /opt/conda && \
+    rm ~/anaconda.sh
+
 RUN pip --no-cache-dir install --upgrade \
         altair \
         dask \
         multiprocessing \
         pandas_summary \
         sklearn_pandas
-
-RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
-    wget --quiet https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh -O ~/anaconda.sh && \
-    /bin/bash ~/anaconda.sh -b -p /opt/conda && \
-    rm ~/anaconda.sh
 
 # set path for conda
 ENV PATH /opt/conda/bin:$PATH
