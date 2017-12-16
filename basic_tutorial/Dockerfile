@@ -28,13 +28,11 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
     rm ~/anaconda.sh
 
-RUN pip --no-cache-dir install --upgrade \
-        altair \
-        dask \
-        multiprocessing \
-        pandas_summary \
-        sklearn_pandas
+ENV PATH /opt/conda/bin:$PATH
 
+RUN pip --no-cache-dir install --upgrade \
+        multiprocessing \
+        sklearn-pandas
 
 # Open Ports for Jupyter
 EXPOSE 7745
