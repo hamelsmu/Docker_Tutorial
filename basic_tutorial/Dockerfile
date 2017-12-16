@@ -35,8 +35,6 @@ RUN pip --no-cache-dir install --upgrade \
         pandas_summary \
         sklearn_pandas
 
-# set path for conda
-ENV PATH /opt/conda/bin:$PATH
 
 # Open Ports for Jupyter
 EXPOSE 7745
