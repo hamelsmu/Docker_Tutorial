@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 # Adds metadata to the image as a key value pair example LABEL version="1.0"
-LABEL maintainer="Hamel Husain <youremail@gmail.com>"
+LABEL maintainer="Hamel Husain <www.github.com/hamelsmu>"
 
 ##Set environment variables
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
