@@ -1,3 +1,3 @@
 #! /bin/bash
 
-sudo docker build -t tutorial -f ./Dockerfile.test ./
+sudo docker build -t tutorial -f ./Dockerfile ./
