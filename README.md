@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/hamelsmu/Docker_Tutorial.svg)](https://github.com/hamelsmu/Docker_Tutorial/issues)[![GitHub license](https://img.shields.io/github/license/hamelsmu/Docker_Tutorial.svg)](https://github.com/hamelsmu/Docker_Tutorial)
+
 # Docker Tutorial
 Companion code to [How Docker Can Help You Become A More Effective Data Scientist](https://medium.com/@hamelhusain/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5)
 
