@@ -15,7 +15,7 @@ RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificate
     htop \
     pkg-config \
     python3-dev \
-    python-pip \
+    python3-pip \
     python-setuptools \
     python-virtualenv \
     unzip \
@@ -30,8 +30,8 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN pip --no-cache-dir install --upgrade \
-        multiprocessing \
+RUN pip3 --no-cache-dir install --upgrade \
+        altair \
         sklearn-pandas
 
 # Open Ports for Jupyter
