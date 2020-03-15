@@ -39,8 +39,8 @@ ENV HOME=/ds
 ENV SHELL=/bin/bash
 VOLUME /ds
 WORKDIR /ds
-ADD run_jupyter.sh /ds/run_jupyter.sh
-RUN chmod +x /ds/run_jupyter.sh
+COPY run_jupyter.sh /run_jupyter.sh
+RUN chmod +x /run_jupyter.sh
 
 # Run the shell
-CMD  ["./run_jupyter.sh"]
+CMD  ["/run_jupyter.sh"]
