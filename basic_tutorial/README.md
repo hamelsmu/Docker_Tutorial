@@ -2,9 +2,9 @@
 
 You must be in this directory to run these commands
 
-1.  Grant execution permissions on shell scripts
+1.  Grant execution permissions on shell scripts (usually you would use chmod +x)
 
-> chmod 777 *.sh
+> chmod +x *.sh
 
 2. Run the build script (may take ~ 5 minutes), this builds the image
 
