@@ -30,10 +30,6 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN pip3 --no-cache-dir install --upgrade \
-        altair \
-        sklearn-pandas
-
 # Open Ports for Jupyter
 EXPOSE 7745
 
